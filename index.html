@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incremental Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login/Registration Section -->
+    <div id="login-container">
+        <h1>Login</h1>
+        <input type="text" id="login-username" placeholder="Username">
+        <input type="password" id="login-password" placeholder="Password">
+        <button id="login-button">Log In</button>
+        <p id="login-message"></p>
+        <h2>Register</h2>
+        <input type="text" id="register-username" placeholder="Username">
+        <input type="password" id="register-password" placeholder="Password">
+        <button id="register-button">Register</button>
+    </div>
+
+    <!-- Game Section -->
+    <div id="game-container" style="display: none;">
+        <h1>Incremental Game</h1>
+        <div id="main-game">
+            <button id="clicker">Click Me!</button>
+            <p>Clicks: <span id="click-count">0</span></p>
+            <button id="upgrade">Upgrade Click Power (Cost: <span id="upgrade-cost">10</span>)</button>
+            <button id="auto-clicker">Buy Auto Clicker (Cost: <span id="auto-clicker-cost">50</span>)</button>
+            <button id="increase-click-speed">Increase Click Speed (Cost: <span id="click-speed-cost">100</span>)</button>
+            <button id="prestige">Prestige (Cost: <span id="prestige-cost">5000</span>)</button>
+            <p>Auto Clickers: <span id="auto-clicker-count">0</span></p>
+            <p>Click Power: <span id="click-power">1</span></p>
+            <p>Click Speed: <span id="click-speed">1</span> clicks per second</p>
+            <p>Rebirths: <span id="rebirth-count">0</span></p>
+            <p>Prestige Level: <span id="prestige-level">0</span></p>
+            <button id="rebirth">Rebirth (Cost: <span id="rebirth-cost">1000</span>)</button>
+        </div>
+
+        <!-- Leaderboard -->
+        <div id="leaderboard-tab" style="display: none;">
+            <h2>Leaderboard</h2>
+            <table id="leaderboard">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Clicks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Leaderboard entries will go here -->
+                </tbody>
+            </table>
+        </div>
+        <button id="show-leaderboard">Show Leaderboard</button>
+
+        <!-- Username Container -->
+        <div id="username-container">
+            <input type="text" id="username" placeholder="Enter your username">
+            <button id="submit-username">Submit Username</button>
+        </div>
+
+        <!-- Admin Panel -->
+        <div id="admin-panel" style="display: none;">
+            <h2>Admin Panel</h2>
+            <label for="admin-username">Admin Username:</label>
+            <input type="text" id="admin-username" />
+            <label for="admin-click-power">Click Power:</label>
+            <input type="number" id="admin-click-power" />
+            <label for="admin-upgrade-cost">Upgrade Cost:</label>
+            <input type="number" id="admin-upgrade-cost" />
+            <label for="admin-auto-clicker-cost">Auto Clicker Cost:</label>
+            <input type="number" id="admin-auto-clicker-cost" />
+            <label for="admin-click-speed-cost">Click Speed Cost:</label>
+            <input type="number" id="admin-click-speed-cost" />
+            <label for="admin-rebirth-cost">Rebirth Cost:</label>
+            <input type="number" id="admin-rebirth-cost" />
+            <label for="admin-prestige-cost">Prestige Cost:</label>
+            <input type="number" id="admin-prestige-cost" />
+            <label for="admin-prestige-multiplier">Prestige Multiplier:</label>
+            <input type="number" step="0.1" id="admin-prestige-multiplier" />
+            <button id="admin-update">Update Values</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
